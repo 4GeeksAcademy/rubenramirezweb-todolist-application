@@ -1,11 +1,68 @@
-/* 
+* {
+    margin: 0;
+    padding: 0;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+body {
+    background-color: #e9e9e9;
+    font-family: Roboto, sans-serif;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
 
-*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: Roboto, sans-serif;
+    color: #1b1b32;
+
+}
+
+.input-tarea {
+    width: 500px;
+    height: 65px;
+    border-radius: 5px;
+    border: 1px solid #919191;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tareas-listas {
+    width: 600px;
+    min-height: 500px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 
+        4px 4px 8px rgba(0, 0, 0, 0.2),  /* Sombra derecha */
+        -4px 4px 8px rgba(0, 0, 0, 0.2), /* Sombra izquierda */
+        0 8px 16px rgba(0, 0, 0, 0.3);   /* Sombra abajo */
+    z-index: 3;
+    /* position: relative; */
+    
+    font-size: 20px;
+    /* display: flex; */
+    align-items: center;
+    overflow-wrap: anywhere;
+}
+
+
+
+
+
+
+
+.tarea-icono {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
