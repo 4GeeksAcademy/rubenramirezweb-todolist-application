@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import '../../styles/IngresodeTarea.css';
 
@@ -8,20 +8,22 @@ function IngresodeTarea(props) {
 
   const manejarCambio = e => {
     setInput(e.target.value);
-    console.log(e.target.value);
-  }
+  };
 
   const manejarEnvio = e => {
     e.preventDefault();
+
+    if (input.trim() === "") return; // Evita agregar tareas vacías
 
     const tareaNueva = {
       id: uuidv4(),
       texto: input,
       completada: false
-    }
-    props.onSubmit(tareaNueva);
-  }
+    };
 
+    props.onSubmit(tareaNueva);
+    setInput(''); // Limpia el input después de presionar enter o enviar con el botón
+  };
 
   return (
     <form 
@@ -29,14 +31,20 @@ function IngresodeTarea(props) {
         onSubmit={manejarEnvio}> 
         <input 
             className='tarea-input'
-            type='texto'
+            type='text'
             placeholder='Escribe aquí una tarea...'
             name='texto'
+            value={input}
             onChange={manejarCambio}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                manejarEnvio(e);
+              }
+            }}
         />
         <button className='tarea-boton'>Agregar tarea</button>
     </form>
-  )
+  );
 }
 
 export default IngresodeTarea;

@@ -28,6 +28,6 @@
 }
 
 .tarea-contenedor.completada {
-    background-color: antiquewhite);
+    background-color: #d3e4cd;
     text-decoration: line-through;  /* Decoración del texto tachado */
 }
