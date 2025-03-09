@@ -32,7 +32,7 @@ function IngresodeTarea(props) {
         <input 
             className='tarea-input'
             type='text'
-            placeholder='Escribe aquí una tarea...'
+            placeholder='Agrega una tarea...'
             name='texto'
             value={input}
             onChange={manejarCambio}
@@ -42,7 +42,7 @@ function IngresodeTarea(props) {
               }
             }}
         />
-        <button className='tarea-boton'>Agregar tarea</button>
+        <button className='tarea-boton'>Guardar tarea</button>
     </form>
   );
 }

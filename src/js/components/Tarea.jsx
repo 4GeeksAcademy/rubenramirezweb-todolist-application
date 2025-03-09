@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { AiFillDelete } from "react-icons/ai";
 
 import '../../styles/tarea.css';
 
@@ -14,7 +14,7 @@ function Tarea({ id, texto, completada, completarTarea, eliminarTarea }) {
         <div 
             className="tarea-contenedor-iconos"
             onClick={() => {eliminarTarea(id)}}>
-            <AiOutlineCloseCircle className="tarea-icono" />
+            <AiFillDelete className="tarea-icono" />
         </div>
     </div>
   )
